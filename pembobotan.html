@@ -10,7 +10,7 @@
   <meta name="author" content="">
   <link rel="shortcut icon" href="./img/logo-unmuh.png" type="image/x-icon">
 
-  <title>Dashboard</title>
+  <title>Pembobotan Karyawan</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -54,7 +54,7 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
@@ -150,16 +150,120 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Tugas Akhir</h1>
-            <!-- <a href="./pdf/proposal-skripsi.pdf" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" download><i class="fas fa-download fa-sm text-white-50"></i> Downlaod Tugas</a> -->
-          </div>
 
           <!--Main Content-->
-          <div class="main-wrapper">        
-              <object data="./pdf/proposal-skripsi.pdf" type="application/pdf" width="100%" class="end-task">
-                alt : <a href="./pdf/proposal-skripsi.pdf">test.pdf</a>
-              </object>
+          <div class="main-wrapper text-center employ-data">     
+            <div class="d-sm-flex align-items-center justify-content-between mb-5">
+              <h1 class="h3 mb-0 text-gray-800">Implementasi Metode ELECTRE (ELIMINATION ET CHOIX TRADUISANT LA REALITE)</h1>
+              <!-- <a href="./pdf/proposal-skripsi.pdf" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" download><i class="fas fa-download fa-sm text-white-50"></i> Downlaod Tugas</a> -->
+            </div>
+            <h3 class="text-black mb-4"><b>Pembobotan Karyawan</b></h3>
+
+            <div class="list-data-wrapper">
+              <table class="table table-light bg-white">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">No.Karyawan</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">C1</th>
+                    <th scope="col">C2</th>
+                    <th scope="col">C3</th>
+                    <th scope="col">C4</th>
+                    <th scope="col">C5</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>K001</td>
+                    <td>Wahyuni</td>
+                    <td>Cukup</td>
+                    <td>Cukup</td>
+                    <td>Baik</td>
+                    <td>1 Tahun</td>
+                    <td>D3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <!--Add Employee-->
+          <div class="modal container margin-auto" id="addEmployee" tabindex="-1" role="dialog" aria-labelledby="addEmployeeLabel" aria-hidden="true">
+            <div class="add-wrapper bg-white p-5">
+              <div class="container">
+                <h3 class="text-center color-black">Form Input Data Karyawan</h3>
+                <form>
+                  <fieldset>
+                    <div class="form-group">
+                      <label for="disabledTextInput">No. Karyawan</label>
+                      
+                      <div class="input-group mb-2">
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="No">           
+                        <div class="input-group-prepend">          
+                          <div class="input-group-text"><i class="fas fa-tag"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="disabledTextInput">Nama Karyawan</label>
+
+                      <div class="input-group mb-2">
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Nama">           
+                        <div class="input-group-prepend">          
+                          <div class="input-group-text"><i class="fas fa-user-edit"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="disabledSelect">Kinerja</label>
+
+                      <select id="disabledSelect" class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="disabledSelect">Kedisiplinan</label>
+
+                      <select id="disabledSelect" class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="disabledSelect">Loyalitas</label>
+
+                      <select id="disabledSelect" class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="disabledSelect">Pengalaman Bekerja</label>
+
+                      <select id="disabledSelect" class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="disabledSelect">Tingkat Pendidikan</label>
+
+                      <select id="disabledSelect" class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-success">Simpan</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
           </div>
 
         </div>

@@ -69,14 +69,14 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="atribut.html">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Bobot Atribut</span></a>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="data.html">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Data Karyawan</span></a>
@@ -92,9 +92,19 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="penilaian.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Penilaian Karyawan</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Penilaian Karyawan</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="pembobotan.html">Pembobotan Karyawan</a>
+            <a class="collapse-item" href="bobot-alternatif.html">Pembobotan Alternatif</a>
+            <a class="collapse-item" href="normalisasi-matrik.html">Normalisasi Matriks</a>
+            <a class="collapse-item" href="bobot-matrik.html">Pembobotan pada Matriks</a>
+            <a class="collapse-item" href="concordance-disordance.html">Concordance dan <br/>Disordance Index</a>
+          </div>
+        </div>
       </li>
 
       <!-- Divider -->
@@ -142,37 +152,128 @@
           <!-- Page Heading -->
 
           <!--Main Content-->
-          <div class="main-wrapper text-center">     
-            <h3>Daftar Karyawan</h3>
-            <div class="list-atribut-wrapper">
-              <table>
-                <tr>
-                  <th>No</th>
-                  <th>Kode</th>
-                  <th>Kriteria/Variable</th>
-                  <th>Sub.Kriteria</th>
-                  <th>Nilai</th>
-                </tr>
-                <tr>
-                  <td rowspan="4">1</td>
-                  <td rowspan="4">C1</td>
-                  <td rowspan="4">Kinerja</td>
-                  <td>Baik</td>
-                  <td>100</td>
-                </tr>
-                <tr>
-                  <td>Cukup</td>
-                  <td>75</td>
-                </tr>
-                <tr>
-                  <td>Masih Kurang</td>
-                  <td>50</td>
-                </tr>
-                <tr>
-                  <td>Sangat Kurang</td>
-                  <td>25</td>
-                </tr>
+          <div class="main-wrapper text-center employ-data">     
+            <h3 class="text-black"><b>Daftar Karyawan</b></h3>
+            <div class="form-group row filter justify-content-center mt-5">
+              <label for="inlineFormInputGroupUsername2" class="col-sm-2 col-form-label col-form-label-sm">Cari Karyawan</label>
+              <div class="col-6">
+                <div class="input-group mb-2 mr-sm-2">
+                  <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">            
+                  <div class="input-group-prepend">                
+                    <button type="submit" class="btn btn-default border mb-2">Filter</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr/>
+
+            <button role="button" class="btn btn-success float-left mb-4"  data-toggle="modal" data-target="#addEmployee">Tambah</button>
+            <div class="list-data-wrapper">
+              <table class="table table-light bg-white">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">No.Karyawan</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">C1</th>
+                    <th scope="col">C2</th>
+                    <th scope="col">C3</th>
+                    <th scope="col">C4</th>
+                    <th scope="col">C5</th>
+                    <th scope="col">Delete?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td><button class="btn btn-edit-no" role="button"><i class="far fa-edit"></i> K001</button></td>
+                    <td>Wahyuni</td>
+                    <td>Cukup</td>
+                    <td>Cukup</td>
+                    <td>Baik</td>
+                    <td>1 Tahun</td>
+                    <td>D3</td>
+                    <td><button class="btn btn-delete" role="button"><i class="far fa-trash-alt"></i> Hapus</button></td>
+                  </tr>
+                </tbody>
               </table>
+            </div>
+          </div>
+          
+          <!--Add Employee-->
+          <div class="modal container margin-auto" id="addEmployee" tabindex="-1" role="dialog" aria-labelledby="addEmployeeLabel" aria-hidden="true">
+            <div class="add-wrapper bg-white p-5">
+              <div class="container">
+                <h3 class="text-center color-black">Form Input Data Karyawan</h3>
+                <form>
+                  <fieldset>
+                    <div class="form-group">
+                      <label for="disabledTextInput">No. Karyawan</label>
+                      
+                      <div class="input-group mb-2">
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="No">           
+                        <div class="input-group-prepend">          
+                          <div class="input-group-text"><i class="fas fa-tag"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="disabledTextInput">Nama Karyawan</label>
+
+                      <div class="input-group mb-2">
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Nama">           
+                        <div class="input-group-prepend">          
+                          <div class="input-group-text"><i class="fas fa-user-edit"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="disabledSelect">Kinerja</label>
+
+                      <select id="disabledSelect" class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="disabledSelect">Kedisiplinan</label>
+
+                      <select id="disabledSelect" class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="disabledSelect">Loyalitas</label>
+
+                      <select id="disabledSelect" class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="disabledSelect">Pengalaman Bekerja</label>
+
+                      <select id="disabledSelect" class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="disabledSelect">Tingkat Pendidikan</label>
+
+                      <select id="disabledSelect" class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-success">Simpan</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
             </div>
           </div>
 

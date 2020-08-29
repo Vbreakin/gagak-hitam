@@ -5,11 +5,29 @@
 }
 .list-atribut-wrapper{
   table{
-    margin-top: 1.5rem;
-    min-width: 700px;
+    min-width: 70%;
     margin: auto;
       td, th{
           border: 1px solid gray;
       }
   }
+}
+.employ-data{
+  .form-group{
+    &.filter{
+      max-width: 80%;
+    }
+  }
+}
+.list-data-wrapper{
+  table{
+    th, td{
+      text-align: left;
+    }
+  }
+}
+#addEmployee{
+  margin: auto;
+  left: 0;
+  right: 0;
 }

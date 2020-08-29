@@ -92,9 +92,19 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="penilaian.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Penilaian Karyawan</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Penilaian Karyawan</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="pembobotan.html">Pembobotan Karyawan</a>
+            <a class="collapse-item" href="bobot-alternatif.html">Pembobotan Alternatif</a>
+            <a class="collapse-item" href="normalisasi-matrik.html">Normalisasi Matriks</a>
+            <a class="collapse-item" href="bobot-matrik.html">Pembobotan pada Matriks</a>
+            <a class="collapse-item" href="concordance-disordance.html">Concordance dan <br/>Disordance Index</a>
+          </div>
+        </div>
       </li>
 
       <!-- Divider -->
@@ -146,8 +156,8 @@
           </div>
 
           <!--Main Content-->
-          <div class="main-wrapper text-center">     
-            <h3>Atribut Penilaian Karyawan</h3>
+          <div class="main-wrapper text-center"> 
+            <h3 class="text-black"><b>Atribut Penilaian Karyawan</b></h3>
             <div class="list-atribut-wrapper">
               <table>
                 <tr>
