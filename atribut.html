@@ -10,7 +10,7 @@
   <meta name="author" content="">
   <link rel="shortcut icon" href="./img/logo-unmuh.png" type="image/x-icon">
 
-  <title>Dashboard</title>
+  <title>List Atribut</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -54,7 +54,7 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
@@ -69,7 +69,7 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="atribut.html">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Bobot Atribut</span></a>
@@ -141,15 +141,43 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Tugas Akhir</h1>
+            <h1 class="h3 mb-0 text-gray-800">List Atribut</h1>
             <!-- <a href="./pdf/proposal-skripsi.pdf" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" download><i class="fas fa-download fa-sm text-white-50"></i> Downlaod Tugas</a> -->
           </div>
 
           <!--Main Content-->
-          <div class="main-wrapper">        
-              <object data="./pdf/proposal-skripsi.pdf" type="application/pdf" width="100%" class="end-task">
-                alt : <a href="./pdf/proposal-skripsi.pdf">test.pdf</a>
-              </object>
+          <div class="main-wrapper text-center">     
+            <h3>Atribut Penilaian Karyawan</h3>
+            <div class="list-atribut-wrapper">
+              <table>
+                <tr>
+                  <th>No</th>
+                  <th>Kode</th>
+                  <th>Kriteria/Variable</th>
+                  <th>Sub.Kriteria</th>
+                  <th>Nilai</th>
+                </tr>
+                <tr>
+                  <td rowspan="4">1</td>
+                  <td rowspan="4">C1</td>
+                  <td rowspan="4">Kinerja</td>
+                  <td>Baik</td>
+                  <td>100</td>
+                </tr>
+                <tr>
+                  <td>Cukup</td>
+                  <td>75</td>
+                </tr>
+                <tr>
+                  <td>Masih Kurang</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>Sangat Kurang</td>
+                  <td>25</td>
+                </tr>
+              </table>
+            </div>
           </div>
 
         </div>

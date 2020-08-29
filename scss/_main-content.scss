@@ -3,3 +3,13 @@
     height: 100vh;
   }
 }
+.list-atribut-wrapper{
+  table{
+    margin-top: 1.5rem;
+    min-width: 700px;
+    margin: auto;
+      td, th{
+          border: 1px solid gray;
+      }
+  }
+}
